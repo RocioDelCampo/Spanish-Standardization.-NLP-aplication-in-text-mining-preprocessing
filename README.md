@@ -7,12 +7,15 @@ Regarding preprocessing step, it is need a first activity before spelling correc
   - Elimination of puntuation marks, spaces, etc. 
 
 This code to standardizate a text is implemented in Python:
-
-#import packages needed
+````
+#import packages needed: 
+```
+```
 import re
 import spacy
 nlp = spacy.load("es_core_news_sm") #use spanish language
-
+````
+````
 #main function. Standardization of a Text
 
 def PreprocessText(Text,UseHagstag,UseMention,UseWebSite):
@@ -194,3 +197,4 @@ def DeleteStopWord(Text):
             if not len(token.text)==1: # if it a single letter, don't save it
                 FinalText.append(token.text)
     return FinalText
+````

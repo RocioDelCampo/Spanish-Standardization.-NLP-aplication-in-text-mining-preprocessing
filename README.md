@@ -13,6 +13,7 @@ import re
 import spacy
 nlp = spacy.load("es_core_news_sm") #use spanish language
 ````
+PreprocessText is the main function. A specific Text is introduced to be preprocessed
 ````
 #main function. Standardization of a Text
 
@@ -85,10 +86,8 @@ def GetRegularExpression(Text):
     #return FinalText: text standarizated. Also Hagstag, Mention, Webs
     return FinalText, GetHagstag, GetMention, GetWebs
 
-"""
-***********************
-***********************
-""" 
+````
+````
 #Transform an abbreviated word into its corresponding correct form
 def GetCorrectWordAbbreviation(word):
     original=word
@@ -131,20 +130,16 @@ def GetCorrectWordAbbreviation(word):
             'salu2':'saludos'
             }
     return switcher.get(word,original)
-"""
-***********************
-***********************
-"""  
+````
+````
 #Transform an abbreviated words in a text into its corresponding correct form
 def GetTextNoAbbreviation(Text):
     TextSinAbreviacion=""
     for i in range(len(Text)):
         TextSinAbreviacion=TextSinAbreviacion+GetCorrectWordAbbreviation(Text[i])+" "
     return TextSinAbreviacion
-"""
-***********************
-***********************
-"""
+````
+````
 #delete endings in infinitive verbs in a Text
 def DeleteEndings(Text):
     FinalText=[]
@@ -155,10 +150,8 @@ def DeleteEndings(Text):
         else:
             FinalText.append(token.text)
     return FinalText
-"""
-***********************
-***********************
-"""
+````
+````
 #delete endings in an infinitive verb word
 def DeleteCDVerbo(word):
     FinalText=""
@@ -176,10 +169,8 @@ def DeleteCDVerbo(word):
         else:
             FinalText=word #save original word
     return FinalText
-"""
-***********************
-***********************
-"""  
+````
+````
 #Delete StopWords in a Text
 def DeleteStopWord(Text):
     FinalText=[]

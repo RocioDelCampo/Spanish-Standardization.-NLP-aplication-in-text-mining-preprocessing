@@ -9,8 +9,6 @@ Regarding preprocessing step, it is need a first activity before spelling correc
 This code to standardizate a text is implemented in Python:
 ````
 #import packages needed: 
-```
-```
 import re
 import spacy
 nlp = spacy.load("es_core_news_sm") #use spanish language
@@ -40,15 +38,9 @@ def PreprocessText(Text,UseHagstag,UseMention,UseWebSite):
         Text=Text+" "+webs
 
     return Text
-"""
-***********************
-***********************
-""" 
-#functions needed in the main function
-"""
-***********************
-***********************
-""" 
+````
+functions needed in the main function
+````
 def GetRegularExpression(Text):
     """
     Save webs hagstags mentions

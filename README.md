@@ -1,4 +1,4 @@
-# Spanish-Standardization.-Preprocessing-stage-in-text-mining
+# Spanish-Standardization.-Preprocessing-stage-in-text-mining-(NLP)
 
 General process text mining has different steps: data acquisition, preprocessing, transformation, analysis and evaluation.
 Regarding preprocessing step, it is need a first activity before spelling correction and stemming. This first activity is called standardization and cleaning. The main steps are:
